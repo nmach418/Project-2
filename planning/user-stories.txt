@@ -1,0 +1,4 @@
+Users create accounts via 'create account' button(s) on main page.
+Users sign in via 'sign in' button on main page.
+Users are presented with page to submit navigation hazard information and description  upon sign in.
+Users submit comment via input field and submit button(s).

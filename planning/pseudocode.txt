@@ -1,0 +1,23 @@
+createAccount {
+    userName
+    password
+}
+useLogin {
+    userName
+    password
+}
+hazard = {
+    waterway: 'e.g., Potomac River'
+    location: 'e.g., 100 yards due east of Leesylvania State Park Marina entrance
+    lat/long:  (lat / long if available)
+    hazardDesc: 'e.g., Titanic aground. Obstructing entrance to Leesylvania State Park marina'
+}
+submitHazard {
+}
+comment = {
+    datetime:
+    user:
+    descript:
+}
+submitComment {
+}

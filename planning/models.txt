@@ -1,0 +1,17 @@
+const User {
+    username: "string"
+    password: "string"
+}
+const Hazards {
+    dateTime: (dateTime)
+    user: (as ref)
+    waterwayName: "string" (e.g., Potomac River)
+    location:"string" (e.g., 500 yards North of Freestone Point near mouth of Neabsco Creek)
+    lat/long: integer (lat/log if available)
+    decription: "string"   
+}
+const Comments {
+    descript
+    dateTime
+    user(as ref)
+}
