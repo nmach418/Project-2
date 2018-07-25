@@ -21,4 +21,6 @@ const User = new Schema({
 
 // NOTE: Revisit this file later to include bcrypt code.
 
+// TEMP Description of this file: Required the connection.js file and saved it to the variable mongoose. Imported Schema from mongoose.Schema. Defined a User schema using mongoose's .Schema() method. Exported schema using module.exports and mongoose.model().
+
 module.exports = mongoose.model("User", User);   // Discuss "User", User
