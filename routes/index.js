@@ -11,7 +11,7 @@ router.use('/user', require('./user'));
 router.use('/hazards', require('./hazards'));
 router.use('/comments', require('./comments'));
 
-router.all('*', (req, res) => {
+router.all('*', (req, res) => {             // Ask about the Bad Response to all, too.
     res.status(400).send();
 });
 
