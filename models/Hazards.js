@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const Hazards = new Schema({
   waterwayName: String,
   location: String,
-  latLng: Integer,      //if available
+  latLng: Number,      //if available
   hazDesc: String,
   createdAt: {
     type: Date,
