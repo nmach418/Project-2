@@ -3,7 +3,7 @@ const { Hazards } = require("../models/Hazards");
 
 module.exports = {
     index: (req, res) => {
-        Hazard.find({})
+        Hazards.find({})
             .sort({ createdAt: -1 })
             .limit(10)
             .populate("author")
