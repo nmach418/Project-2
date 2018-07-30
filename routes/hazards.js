@@ -11,18 +11,3 @@ router.put("/", hazardsController.update);
 router.put("/:id", hazardsController.update);
 
 module.exports = router;
-
-
-// !!!! Refer to Twitter View not the final solution!!! REMOVE requireAuth
-
-const express = require("express");
-const router = express.Router();
-const tweetController = require("../controllers/tweet");
-
-router.post("/", tweetController.create);
-router.get("/new", tweetController.new);
-router.get("/:id", tweetController.show);
-router.put("/", tweetController.update);
-router.put("/:id", tweetController.update);
-
-module.exports = router;
