@@ -2,9 +2,8 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/user.js');
 
-// Come back and complete account login, signUp, logout and show later...
-
-
-
+router.get("/new", userController.new);
+router.get("/:id", userController.show);
+router.post("/", userController.create);
 
 module.exports = router
