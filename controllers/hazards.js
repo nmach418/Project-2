@@ -2,6 +2,18 @@ const { Hazards, Comment } = require("../models/Hazards"); // Think. 'Comment' m
 const User = require("../models/User");
 
 module.exports = {
+  index: (req, res) => {
+    Hazards.find({})
+        .sort({ createdAt: -1 })
+        .limit(10)
+        .populate("author")
+        .then(hazards => {
+            res.render("app/index", { hazards })
+        });
+      },
+
+
+
   show: (req, res) => {
     Hazards.findOne({ _id: req.params.id })
       .populate("author")
@@ -50,4 +62,8 @@ module.exports = {
       res.redirect('/')
     })
   }
+
+
+
+
 };

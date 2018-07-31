@@ -2,6 +2,7 @@
 const { Hazards } = require("../models/Hazards");
 
 module.exports = {
+    // move this index into the hazards controller
     index: (req, res) => {
         Hazards.find({})
             .sort({ createdAt: -1 })
