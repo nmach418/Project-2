@@ -2,7 +2,7 @@
 const { Hazard } = require("../models/Hazard");
 
 module.exports = {
-    // move this index into the hazards controller
+    // decided against moving this index into the hazards controller - after talking with Don will stick with the tweeter architecture instead.
     index: (req, res) => {
         Hazard.find({})
             .sort({ createdAt: -1 })
