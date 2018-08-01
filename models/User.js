@@ -11,7 +11,7 @@ const User = new Schema({
     hazards: [
         { 
             type: Schema.Types.ObjectId,
-            ref: "Hazards"  // Double check... consider changing related model/Hazards.js file name from Hazards to Hazard???
+            ref: "Hazard"  // Double check... consider changing related model/Hazards.js file name from Hazards to Hazard???
             // Note: ref means reference another model. In the current case, Hazards.
         }
     ]

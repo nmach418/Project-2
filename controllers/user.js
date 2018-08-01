@@ -1,5 +1,5 @@
 const User = require("../models/User");
-const { Hazards } = require("../models/Hazards");
+const { Hazard } = require("../models/Hazard");
 const passport = require("passport");
 
 module.exports = {
