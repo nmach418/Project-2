@@ -12,4 +12,4 @@ app.set("view engine", "hbs");
 app.use(methodOverride("_method"));  // Review
 app.use(require("./routes/index.js"));
 
-app.listen(3500, () => console.log("this server is limping along"));
+app.listen(3500, () => console.log("this server is plugging along"));

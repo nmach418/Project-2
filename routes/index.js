@@ -5,6 +5,7 @@ const router = express.Router();
 router.use('/user', require('./user'));
 router.use('/hazards', require('./hazards'));
 router.use('/', require('./hazards'));
+router.use('/show', require('./show'));  // temp test for showy - delete
 
 
 
