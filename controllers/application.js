@@ -1,10 +1,10 @@
 // Test code derived from Tweeter
-const { Hazards } = require("../models/Hazards");
+const { Hazard } = require("../models/Hazard");
 
 module.exports = {
     // move this index into the hazards controller
     index: (req, res) => {
-        Hazards.find({})
+        Hazard.find({})
             .sort({ createdAt: -1 })
             .limit(10)
             .populate("author")
