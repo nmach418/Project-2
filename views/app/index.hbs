@@ -7,19 +7,19 @@
 {{/if}} -->
 
 
-{{#if tweets}}
-  <ul class="tweets">
-    {{#each tweets}}
+{{#if hazards}}
+  <ul class="hazards">
+    {{#each hazards}}
       <div class="card">
         <div class="card-content">
-          <a class="card-title" href="/tweet/{{id}}">
+          <a class="card-title" href="/hazard/{{id}}">
             {{ content }}
           </a>
         </div>
         <div class="card-action">
           <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
-          <span class="tweet__date">{{ createdAt }}</span>
-          <span class="tweet_comments">{{ comments.length }} Comments</span>
+          <span class="hazard__date">{{ createdAt }}</span>
+          <span class="hazard_comments">{{ comments.length }} Comments</span>
         </div>
       </div>
     {{/each}}
