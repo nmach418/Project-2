@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-content">
+    <a class="card-title" href="/hazard/{{id}}">
+      {{ content }}
+    </a>
+  </div>
+  <div class="card-action">
+    <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+    <span class="hazard__date">{{ createdAt }}</span>
+    <span class="hazard_comments">{{ comments.length }} Comments</span>
+    <form class="" action="/hazard/{{id}}?_method=DELETE" method="POST">
+      <button type="submit" name="button">Delete</button>
+    </form>
+  </div>
+</div>
