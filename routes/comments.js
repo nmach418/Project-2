@@ -8,3 +8,5 @@ router.get("/new", commentsController.new);
 router.post("/", commentsController.create);
 router.get("/:id", commentsController.show);
 router.put("/:id", hazardsController.update);
+
+module.exports = router;
