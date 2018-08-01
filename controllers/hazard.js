@@ -12,19 +12,19 @@ module.exports = {
             res.render("app/index", { hazards })
         });
       },
-  // show: (req, res) => {
-  //   Hazard.findOne({ _id: req.params.id })
-  //     .populate("author")
-  //     .exec(function(err, hazards) {
-  //       Comment.populate(hazards.comments, { path: "author" }, function(    // Think. 'Comment'.
-  //         err,
-  //         comments      // Think. 'comments'.
-  //       ) {
-  //         hazards.comments = comments;        // Think. 'comments'.
-  //         res.render("hazards/show", hazards);
-  //       });
-  //     });
-  // },
+  show: (req, res) => {
+    Hazard.findOne({ _id: req.params.id })
+      .populate("author")
+      .exec(function(err, hazards) {
+        Comment.populate(hazards.comments, { path: "author" }, function(    // Think. 'Comment'.
+          err,
+          comments      // Think. 'comments'.
+        ) {
+          hazards.comments = comments;        // Think. 'comments'.
+          res.render("hazards/show", hazards);
+        });
+      });
+  },
   new: (req, res) => {
     User.find({}).then(users => {
       res.render("hazards/new", { users });
