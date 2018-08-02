@@ -9,6 +9,14 @@ body {
     text-align: center;
 
 }
+
+.form-container {
+    padding: 20px;
+}
+
+.btn {
+    background-color: rgb(64, 152, 219);
+}
 /*
 .container {
     background-color: rgb(255, 0, 0);
