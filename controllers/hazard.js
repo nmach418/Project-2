@@ -21,24 +21,26 @@ module.exports = {
           comments      // Think. 'comments'.
         ) {
           hazards.comments = comments;        // Think. 'comments'.
-          res.render("hazards/show", hazards);
+          res.render("hazard/show", hazards);
         });
       });
   },
   new: (req, res) => {
     User.find({}).then(users => {
-      res.render("hazards/new", { users });
+      res.render("hazard/new", { users });
     });
   },
   create: (req, res) => {
     Hazard.create({
-      content: req.body.hazards.content,
-      author: req.body.author
+      waterwayName: req.body.hazard.waterwayName,
+      location: req.body.location,
+      latLng: req.body.latLng,
+      hazDesc: req.body.hazDesc
     }).then(hazards => {
       User.findOne({ _id: req.body.author }).then(user => {
-        user.hazards.push(hazards);
+        user.hazards.push(hazard);
         user.save(err => {
-          res.redirect(`/hazards/${hazards._id}`);
+          res.redirect(`/hazard/${hazard._id}`);
         });
       });
     });
@@ -51,7 +53,7 @@ module.exports = {
         author
       });
       hazards.save(err => {
-        res.redirect(`/hazards/${hazards._id}`);
+        res.redirect(`/hazard/${hazard._id}`);
       });
     });
   },

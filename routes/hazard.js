@@ -13,7 +13,7 @@ const hazardController = require("../controllers/hazard");
 
 
 
-// router.get("/", hazardController.index);
+// router.get("/", hazardController.index); 
 router.post("/", hazardController.create); 
 router.get("/new", hazardController.new); 
 router.get("/:id", hazardController.show); 
