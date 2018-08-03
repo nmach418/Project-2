@@ -1,6 +1,6 @@
-// Connection to navhazards db
+// Connection to navhaz db
 const  mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/navhaz");  // Discuss navhazards db name
-mongoose.Promise = Promise;   // Research Promise again - used in place of callbacks
+mongoose.connect("mongodb://localhost/navhaz"); 
+mongoose.Promise = Promise;   
 
 module.exports = mongoose;

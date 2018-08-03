@@ -1,5 +1,5 @@
 
-const { Hazard, Comment } = require("../models/Hazard"); // Think. 'Comment' may in it's own controller.
+const { Hazard, Comment } = require("../models/Hazard");
 const User = require("../models/User");
 
 module.exports = {
@@ -16,11 +16,11 @@ module.exports = {
     Hazard.findOne({ _id: req.params.id })
       .populate("author")
       .exec(function(err, hazards) {
-        Comment.populate(hazards.comments, { path: "author" }, function(    // Think. 'Comment'.
+        Comment.populate(hazards.comments, { path: "author" }, function(   
           err,
-          comments      // Think. 'comments'.
+          comments     
         ) {
-          hazards.comments = comments;        // Think. 'comments'.
+          hazards.comments = comments;     
           res.render("hazard/show", hazards);
         });
       });
@@ -48,7 +48,7 @@ module.exports = {
   update: (req, res) => {
     let { content, author } = req.body;
     Hazard.findOne({ _id: req.params.id }).then(hazards => {
-      hazards.comments.push({         // Think. 'comments'.
+      hazards.comments.push({        
         content,
         author
       });

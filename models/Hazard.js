@@ -28,7 +28,7 @@ const Hazard = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User"
   },
-  comments: [Comment]     // Discuss for reinforcement. Code no longer applies. Comments were 'in the same model as Tweets ' in the 'two model' Tweeter app. Now we've built a third model. 
+  comments: [Comment]      
 });
 
 module.exports = {

@@ -14,6 +14,7 @@ and easily report hazards to navigation that pose a threat or safety concern to 
  Other core technologies include:
  * HTML
  * CSS
+ * Materialize
  * JavaScript
 
 
