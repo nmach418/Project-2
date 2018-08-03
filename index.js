@@ -12,4 +12,10 @@ app.set("view engine", "hbs");
 app.use(methodOverride("_method"));
 app.use(require("./routes/index.js"));
 
-app.listen(3500, () => console.log("this server is plugging along"));
+// app.listen(3500, () => console.log("this server is plugging along"));
+
+app.set('port', process.env.PORT || 3001)
+
+app.listen(app.get('port'), () => {
+  console.log(`✅ PORT: ${app.get('port')} 🌟`)
+})
