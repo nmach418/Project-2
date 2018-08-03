@@ -8,9 +8,6 @@ router.use('/hazard', require('./hazard'));
 // router.use('/', require('./hazard'));
 
 
-router.use('/show', require('./show'));  // temp test for showy - delete
-
-
 router.all('*', (req, res) => {             
     res.status(400).send();
 });

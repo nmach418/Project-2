@@ -36,7 +36,7 @@ module.exports = {
       location: req.body.location,
       latLng: req.body.latLng,
       hazDesc: req.body.hazDesc
-    }).then(hazards => {
+    }).then(hazard => {
       User.findOne({ _id: req.body.author }).then(user => {
         user.hazards.push(hazard);
         user.save(err => {
