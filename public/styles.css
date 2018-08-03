@@ -1,15 +1,10 @@
-
-
-.nav-wrapper {
-    background-color: rgb(64, 152, 219);
-}
-
 body {
     background-color: rgb(99, 113, 124);
     text-align: center;
-
 }
-
+.nav-wrapper {
+    background-color: rgb(64, 152, 219);
+}
 .form-container {
     padding: 20px;
 }
@@ -17,9 +12,5 @@ body {
 .btn {
     background-color: rgb(64, 152, 219);
 }
-/*
-.container {
-    background-color: rgb(255, 0, 0);
-}
-*/
+
 
