@@ -7,7 +7,7 @@
     <div class="card">
       <div class="card-content">
         <span class="card-title">
-          {{ content }}
+          {{ hazDesc }}
         </span>
       </div>
       <div class="card-action">
@@ -24,8 +24,8 @@
     <h4 class="card-title">Add a comment:</h6>
     <form method="POST" action="/hazard/{{id}}?_method=PUT" class="row">
       <p class="input-field inline col s10">
-        <label for="content"></label>
-        <input type="text" name="content" id="">
+        <label for="hazDesc"></label>
+        <input type="text" name="hazDesc" id="">
       </p>
       <p class="input-field inline col s2">
         <input class="btn" type="submit" value="Submit">
