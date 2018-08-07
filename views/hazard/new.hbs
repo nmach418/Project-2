@@ -2,7 +2,10 @@
   <h5>New Hazard Report</h5>
   <form action="/hazard" method="post" class="hazard-form">
     <div class="input-field">
-      <textarea name="hazard[hazDesc]" cols="30" rows="10" placeholder="Enter Description"></textarea>
+      <textarea name="hazard[waterwayName]" cols="30" rows="10" placeholder="Name of Waterway / Body of water (e.g.,Potomac River)"></textarea>
+      <textarea name="hazard[location]" cols="30" rows="10" placeholder="Hazard Location"></textarea>
+      <textarea name="hazard[latLng]" cols="30" rows="10" placeholder="Latitude/Longitude (if known)"></textarea>
+      <textarea name="hazard[hazDesc]" cols="30" rows="10" placeholder="Hazard Description"></textarea>
     </div>
     <div class="">
       <select name="author" id="author">
