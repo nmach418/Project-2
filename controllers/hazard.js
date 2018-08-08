@@ -33,9 +33,9 @@ module.exports = {
   create: (req, res) => {
     Hazard.create({
       waterwayName: req.body.hazard.waterwayName,
-      location: req.body.location,
-      latLng: req.body.latLng,
-      hazDesc: req.body.hazDesc
+      location: req.body.hazard.location,
+      latLng: req.body.hazard.latLng,
+      hazDesc: req.body.hazard.hazDesc
     }).then(hazard => {
       User.findOne({ _id: req.body.author }).then(user => {
         user.hazards.push(hazard);
