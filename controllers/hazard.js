@@ -47,12 +47,12 @@ module.exports = {
   },
   update: (req, res) => {
     let { content, author } = req.body;
-    Hazard.findOne({ _id: req.params.id }).then(hazards => {
-      hazards.comments.push({        
+    Hazard.findOne({ _id: req.params.id }).then(hazard => {
+      hazard.comments.push({        
         content,
         author
       });
-      hazards.save(err => {
+      hazard.save(err => {
         res.redirect(`/hazard/${hazard._id}`);
       });
     });
