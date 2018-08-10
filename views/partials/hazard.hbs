@@ -1,7 +1,15 @@
 <div class="card">
   <div class="card-content">
     <a class="card-title" href="/hazard/{{id}}">
-      {{ content }}
+       <div class="card">
+        <div class="card-content">
+          <a class="card-title" href="/hazard/{{id}}">
+            <p>Waterway: {{ waterwayName }}</p>
+            <p>Location: {{ location }}</p>
+            <p>LatLng: {{ latLng }} </p>
+            <p>Hazard Description: {{ hazDesc }} </p>
+          </a>
+        </div>
     </a>
   </div>
   <div class="card-action">
